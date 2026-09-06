@@ -68,16 +68,12 @@ h1 em{font-style:normal;color:var(--glow)}
 .lede{font-size:clamp(17px,1.6vw,19.5px);color:var(--muted);max-width:46ch}
 .hero-cta{margin-top:30px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .hero-note{font-size:14.5px;color:var(--muted)}
-.shot{position:relative;border-radius:16px;margin:0;transform:rotate(-1.6deg);
+.shot{position:relative;border-radius:16px;margin:0;
   box-shadow:0 26px 60px -24px rgba(43,35,24,.5),0 3px 12px rgba(43,35,24,.13);
   transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
-.shot:hover{transform:rotate(0deg) scale(1.012)}
+.shot:hover{transform:scale(1.012)}
 .shot img{border-radius:16px}
-.tape{position:absolute;width:118px;height:32px;background:rgba(212,188,146,.9);
-  border-left:1px dashed rgba(43,35,24,.16);border-right:1px dashed rgba(43,35,24,.16);
-  z-index:3;box-shadow:0 3px 7px rgba(43,35,24,.16)}
-.tape.tl{top:-13px;left:-24px;transform:rotate(-27deg)}
-.tape.br{bottom:-13px;right:-24px;transform:rotate(-27deg)}
+
 .shot img{width:100%;height:auto}
 .shot figcaption{position:absolute;left:16px;bottom:16px;z-index:4;background:rgba(26,42,32,.78);
   backdrop-filter:blur(5px);color:var(--linen);font-size:12.5px;font-weight:500;
@@ -120,13 +116,10 @@ h1 em{font-style:normal;color:var(--glow)}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,34px);
   margin-top:clamp(34px,5vw,58px)}
 .pair figure{margin:0;position:relative;transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
-.pair figure:first-child{transform:rotate(-1.9deg)}
-.pair figure:last-child{transform:rotate(1.6deg)}
-.pair figure:hover{transform:rotate(0deg) scale(1.015)}
+
+.pair figure:hover{transform:scale(1.015)}
 .pair img{width:100%;border-radius:14px;box-shadow:0 16px 36px -22px rgba(43,35,24,.45)}
-.story figure{margin:0;position:relative;transform:rotate(1.4deg);
-  transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
-.story figure:hover{transform:rotate(0deg)}
+.story figure{margin:0;position:relative}
 
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,38px)}
 .step .n{font-family:var(--display);font-size:27px;font-weight:800;color:var(--paper);
@@ -255,9 +248,6 @@ h1 em{font-style:normal;color:var(--glow)}
 }
 @media (max-width:600px){
   body{font-size:16.5px}
-  .shot,.story figure,.pair figure:first-child,.pair figure:last-child{transform:rotate(-.8deg)}
-  .tape{width:88px;height:26px}
-  .tape.tl{left:-12px;top:-10px} .tape.br{right:-12px;bottom:-10px}
   .mark{font-size:16.5px;gap:8px}
   .mark img{height:28px}
   .nav .btn{font-size:13.5px;padding:9px 15px;white-space:nowrap}
@@ -298,11 +288,9 @@ h1 em{font-style:normal;color:var(--glow)}
       </div>
     </div>
     <figure class="shot">
-      <span class="tape tl" aria-hidden="true"></span>
-      <span class="tape br" aria-hidden="true"></span>
       <img src="img/playroom-hero.jpg" width="880" height="1100"
            alt="A basement playroom with a rope net, climbing wall, painted forest mural, string lights and a curtained reading nook">
-      <figcaption>My own basement · Ann Arbor</figcaption>
+      <figcaption>Ann Arbor, Michigan</figcaption>
     </figure>
   </div>
 </header>
@@ -366,18 +354,15 @@ h1 em{font-style:normal;color:var(--glow)}
         <p>That's why I only take one room at a time. The building is the easy half.</p>
       </div>
       <figure>
-        <span class="tape tl" aria-hidden="true"></span>
         <img src="img/story.jpg" width="1000" height="886"
              alt="The finished basement playroom lit at night"
              style="border-radius:14px;box-shadow:0 22px 50px -26px rgba(43,35,24,.5)">
       </figure>
     </div>
     <div class="pair rise">
-      <figure><span class="tape tl" aria-hidden="true"></span>
-        <img src="img/detail-net.jpg" width="600" height="750"
+      <figure>        <img src="img/detail-net.jpg" width="600" height="750"
              alt="Knotted rope net over a padded landing with a painted forest mural behind"></figure>
-      <figure><span class="tape br" aria-hidden="true"></span>
-        <img src="img/detail-nook.jpg" width="600" height="750"
+      <figure>        <img src="img/detail-nook.jpg" width="600" height="750"
              alt="Curtained reading nook with a bookshelf, lantern and cushions"></figure>
     </div>
   </div>
