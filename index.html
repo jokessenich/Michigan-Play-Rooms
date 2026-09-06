@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michigan Playrooms — custom playrooms built for Michigan winters, Ann Arbor</title>
+<meta name="description" content="Custom climbing walls, rope nets, forts and reading nooks built into your home. One room at a time, around Ann Arbor, Michigan.">
+<meta property="og:title" content="Michigan Playrooms">
+<meta property="og:description" content="Custom playrooms that keep kids busy all winter. Built into the room you already have.">
+<meta property="og:image" content="img/playroom-hero.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#1B2A20; --night:#131E17; --lift:#243727; --forest:#3B6045;
+  --paper:#F8F2E4; --field:#EFE6D3; --linen:#E9DDC7;
+  --ink:#F2E9D7; --muted:#A6B8A4; --rule:rgba(242,233,215,.16);
+  --pine:#DDB27A; --glow:#F0B44C; --glow-hi:#F5C978;
+  --h1c:#E15A3E; --h2c:#EE8C42; --h3c:#F3C04A; --h4c:#63B06E; --h5c:#4FA3BD; --h6c:#A583BF;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Karla","Helvetica Neue",Arial,sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;background:var(--cream);color:var(--ink);
+  font-family:var(--body);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.04;margin:0;
+  font-variation-settings:"wdth" 112;letter-spacing:-.022em}
+p{margin:0} a{color:inherit} img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2.5px solid var(--glow);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted)}
+
+.nav{position:sticky;top:0;z-index:60;background:rgba(20,31,23,.9);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;align-items:center;gap:28px;height:68px}
+.mark{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em;
+  text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:11px}
+.mark img{height:34px;width:auto;flex:0 0 auto}
+.mark i{font-style:normal;color:var(--glow)}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--muted);padding:4px 0;
+  border-bottom:2px solid transparent;transition:.18s}
+.nav-links a:hover{color:var(--ink);border-bottom-color:var(--glow)}
+.btn{display:inline-block;background:var(--glow);color:#2A1E08;text-decoration:none;
+  font-family:var(--body);font-weight:700;font-size:15px;padding:12px 22px;border:none;
+  border-radius:100px;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.7,.64,1),background .16s;
+  box-shadow:0 4px 0 rgba(43,35,24,.18)}
+.btn:hover{background:var(--glow-hi);transform:translateY(-3px) rotate(-1.2deg);
+  box-shadow:0 8px 0 rgba(43,35,24,.16)}
+.btn:active{transform:translateY(0);box-shadow:0 2px 0 rgba(43,35,24,.2)}
+.btn-glow{background:var(--glow);color:#2A1E08}
+.btn-glow:hover{background:var(--glow-hi);color:#2A1E08}
+.btn-lg{font-size:17px;padding:16px 32px}
+
+.hero{padding:clamp(34px,5vw,64px) 0 clamp(50px,7vw,86px)}
+.hero-in{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,4.5vw,60px);align-items:center}
+h1{font-size:clamp(33px,3.75vw,51px);font-weight:800;
+  font-variation-settings:"wdth" 112;letter-spacing:-.028em;margin:16px 0 22px}
+h1 em{font-style:normal;color:var(--glow)}
+.nb{white-space:nowrap}
+.lede{font-size:clamp(17px,1.6vw,19.5px);color:var(--muted);max-width:46ch}
+.hero-cta{margin-top:30px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero-note{font-size:14.5px;color:var(--muted)}
+.shot{position:relative;border-radius:16px;margin:0;transform:rotate(-1.6deg);
+  box-shadow:0 26px 60px -24px rgba(43,35,24,.5),0 3px 12px rgba(43,35,24,.13);
+  transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
+.shot:hover{transform:rotate(0deg) scale(1.012)}
+.shot img{border-radius:16px}
+.tape{position:absolute;width:118px;height:32px;background:rgba(212,188,146,.9);
+  border-left:1px dashed rgba(43,35,24,.16);border-right:1px dashed rgba(43,35,24,.16);
+  z-index:3;box-shadow:0 3px 7px rgba(43,35,24,.16)}
+.tape.tl{top:-13px;left:-24px;transform:rotate(-27deg)}
+.tape.br{bottom:-13px;right:-24px;transform:rotate(-27deg)}
+.shot img{width:100%;height:auto}
+.shot figcaption{position:absolute;left:16px;bottom:16px;z-index:4;background:rgba(26,42,32,.78);
+  backdrop-filter:blur(5px);color:var(--linen);font-size:12.5px;font-weight:500;
+  padding:7px 13px;border-radius:100px}
+
+.lights{height:46px;background-repeat:repeat-x;background-position:left top;
+  background-size:120px 42px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='42'%3E%3Cpath d='M0 6 Q30 32 60 6 Q90 32 120 6' fill='none' stroke='%23B7A489' stroke-width='1.6'/%3E%3Ccircle cx='30' cy='25' r='5' fill='%23E8A33D'/%3E%3Ccircle cx='90' cy='25' r='5' fill='%23E8A33D'/%3E%3Ccircle cx='30' cy='23.4' r='1.7' fill='%23FBE3B4'/%3E%3Ccircle cx='90' cy='23.4' r='1.7' fill='%23FBE3B4'/%3E%3C/svg%3E")}
+
+.sec{padding:clamp(62px,8vw,112px) 0}
+.cta-band{background:var(--forest);padding:clamp(40px,5vw,60px) 0}
+.cta-in{display:flex;align-items:center;justify-content:space-between;
+  gap:clamp(20px,4vw,50px);flex-wrap:wrap}
+.cta-band h2{font-size:clamp(24px,2.8vw,34px);margin-bottom:8px;color:var(--paper)}
+.cta-band p{color:#CBD8C7;max-width:44ch;font-size:16.5px}
+.sec-hd{max-width:60ch;margin-bottom:clamp(30px,4vw,52px)}
+.sec-hd h2{font-size:clamp(28px,3.4vw,44px);margin:12px 0 16px}
+.sec-hd p{color:var(--muted);font-size:18px;max-width:54ch}
+.dark{background:var(--night)}
+.dark .sec-hd p,.dark .muted{color:var(--muted)}
+.dark .eyebrow{color:var(--glow)}
+
+.split{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(28px,6vw,86px);align-items:start}
+.split .sec-hd{margin-bottom:0;position:sticky;top:104px}
+.split .sec-hd h2{font-size:clamp(26px,2.9vw,38px)}
+.listing{border-top:1.5px solid var(--glow)}
+.item{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,2.5vw,30px);
+  padding:clamp(22px,2.6vw,30px) 0;border-bottom:1px solid var(--rule);align-items:start}
+.item .dot{width:30px;height:30px;margin-top:6px;border-radius:46% 54% 52% 48%/58% 44% 56% 42%;
+  border:1.5px solid rgba(0,0,0,.28);transition:transform .3s cubic-bezier(.34,1.6,.64,1)}
+.item:hover .dot{transform:rotate(-14deg) scale(1.16)}
+.item{transition:padding-left .25s ease}
+.item:hover{padding-left:10px}
+.item h3{font-size:clamp(22px,2.4vw,28px);margin-bottom:7px}
+.item p{font-size:16px;color:var(--muted);max-width:46ch}
+
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,66px);align-items:center}
+.story h2{font-size:clamp(27px,3.3vw,42px);margin:12px 0 20px}
+.story p{color:var(--muted);margin-bottom:15px;max-width:50ch}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,34px);
+  margin-top:clamp(34px,5vw,58px)}
+.pair figure{margin:0;position:relative;transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
+.pair figure:first-child{transform:rotate(-1.9deg)}
+.pair figure:last-child{transform:rotate(1.6deg)}
+.pair figure:hover{transform:rotate(0deg) scale(1.015)}
+.pair img{width:100%;border-radius:14px;box-shadow:0 16px 36px -22px rgba(43,35,24,.45)}
+.story figure{margin:0;position:relative;transform:rotate(1.4deg);
+  transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
+.story figure:hover{transform:rotate(0deg)}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,38px)}
+.step .n{font-family:var(--display);font-size:27px;font-weight:800;color:var(--paper);
+  line-height:1;width:60px;height:60px;
+  display:grid;place-items:center;border-radius:50%;
+  transform:rotate(-4deg);transition:transform .3s cubic-bezier(.34,1.6,.64,1)}
+.step:hover .n{transform:rotate(5deg) scale(1.07)}
+.step h3{font-size:20px;margin:10px 0 8px}
+.step p{font-size:15.5px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.tile{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;padding:clamp(22px,2.6vw,32px)}
+.tile h3{font-size:19px;margin-bottom:8px}
+.tile p{font-size:15px;color:var(--muted)}
+.tile .k{font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--glow);display:block;margin-bottom:10px}
+
+.concept{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);
+  align-items:center;margin-top:clamp(34px,5vw,60px)}
+.concept figure{margin:0;position:relative}
+.concept img{width:100%;border-radius:14px;box-shadow:0 20px 44px -24px rgba(0,0,0,.6)}
+.concept figcaption{position:absolute;left:14px;bottom:14px;background:rgba(19,30,23,.85);
+  color:var(--linen);font-size:12px;font-weight:600;padding:6px 12px;border-radius:100px}
+.concept h3{font-size:clamp(22px,2.4vw,30px);margin:12px 0 14px}
+.concept p{color:var(--muted);font-size:16.5px}
+.plate{background:var(--paper);border:1px solid rgba(43,35,24,.14);border-radius:14px;
+  box-shadow:0 24px 60px -28px rgba(0,0,0,.7);
+  padding:clamp(16px,2vw,28px)}
+.plate-hd{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding-bottom:13px;margin-bottom:8px;border-bottom:1px solid rgba(43,35,24,.14)}
+.plate .eyebrow{color:#6E6152}
+.dwg-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.plate svg{display:block;width:100%;height:auto}
+.scroll-hint{display:none}
+.dwg .struct{stroke:#3A2E1F;stroke-width:2.1;stroke-linejoin:round}
+.dwg .thin{stroke:#D3B98C;stroke-width:.9;fill:none}
+.dwg .net{stroke:#B79A6C;stroke-width:1.5;fill:none;stroke-linecap:round}
+.dwg .dim{stroke:#B0844A;stroke-width:1.4;fill:none}
+.dwg .dimtx{font-family:var(--mono);font-size:14px;fill:#9C7440;text-anchor:middle}
+.dwg .label{font-family:var(--body);font-weight:700;font-size:12.5px;fill:var(--paper);
+  letter-spacing:.12em;text-anchor:middle}
+.tag{cursor:pointer} .tag-hit{fill:transparent}
+.tag-dot{fill:var(--forest);stroke:var(--paper);stroke-width:2.4;transition:fill .2s;pointer-events:none}
+.tag-num{font-family:var(--body);font-weight:700;font-size:13px;fill:var(--paper);
+  text-anchor:middle;pointer-events:none}
+.tag:hover .tag-dot,.tag:focus .tag-dot,.tag.is-on .tag-dot{fill:var(--glow)}
+.tag:hover .tag-num,.tag:focus .tag-num,.tag.is-on .tag-num{fill:#3A2A10}
+.caps{margin-top:16px;padding-top:15px;border-top:1px solid rgba(43,35,24,.14);min-height:78px;color:#2B2318}
+.cap{display:none;gap:13px;align-items:flex-start}
+.cap.is-on{display:flex}
+.cap-n{font-weight:700;font-size:12.5px;background:var(--glow);color:#3A2A10;
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;margin-top:3px}
+.cap b{font-family:var(--display);font-weight:700;font-size:18px;
+  letter-spacing:-.015em;display:block;margin-bottom:2px}
+.cap span:last-child{color:#6E6152;font-size:15.5px}
+
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(26px,4vw,60px)}
+.spec{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);
+  align-items:baseline}
+.spec .v{font-family:var(--mono);font-size:13.5px;color:var(--glow);flex:0 0 86px}
+.spec p{font-size:15.5px;color:var(--muted)}
+
+.wl{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:start}
+.slots{border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:22px;margin-top:26px}
+.slots-row{display:flex;gap:7px;margin:14px 0 12px}
+.slot{flex:1;height:8px;background:rgba(255,255,255,.18);border-radius:100px}
+.slot.taken{background:var(--glow)}
+.slots small{font-size:13px;color:var(--muted)}
+.promise{margin-top:28px}
+.pr{display:flex;gap:14px;padding:13px 0;border-top:1px solid rgba(255,255,255,.16);align-items:baseline}
+.pr .v{font-size:12px;font-weight:700;letter-spacing:.11em;color:var(--glow-hi);flex:0 0 74px;
+  text-transform:uppercase}
+.pr p{font-size:15px;color:var(--muted)}
+.form{background:var(--paper);border-radius:14px;padding:clamp(22px,3vw,36px);color:#2B2318}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;
+  color:#6E6152;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font-family:var(--body);font-size:16px;
+  color:var(--ink);background:var(--field);border:1px solid rgba(43,35,24,.18);border-radius:8px;
+  padding:12px 14px;transition:border-color .16s}
+.field textarea{resize:vertical;min-height:86px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--glow);
+  outline:none;box-shadow:0 0 0 3px rgba(232,163,61,.22)}
+.form .btn{width:100%;padding:16px}
+.fineprint{font-size:13px;color:#6E6152;margin-top:13px;text-align:center}
+.done{display:none;text-align:center;padding:34px 10px}
+.done.is-on{display:block} .done h3{font-size:30px;margin-bottom:12px;color:#2B2318}
+.done p{color:#6E6152;max-width:38ch;margin:0 auto}
+.form.is-sent .fform{display:none}
+
+.foot{border-top:1px solid var(--rule);padding:46px 0 36px}
+.foot-in{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.stamp{border:1.5px solid var(--glow);border-radius:8px;padding:13px 17px;font-size:12px;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.9;color:var(--glow)}
+.foot p{font-size:14.5px;color:var(--muted)}
+
+.rise{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
+.rise.in{opacity:1;transform:none}
+.dwg .struct,.dwg .dim{stroke-dasharray:2400;stroke-dashoffset:2400;
+  animation:draw 1.5s cubic-bezier(.4,0,.2,1) forwards}
+.dwg .dim{animation-delay:1s}
+.dwg .fillfade{opacity:0;animation:fade .7s ease forwards .5s}
+.hold,.riser,.tag{opacity:0;animation:fade .45s ease forwards;animation-delay:var(--d)}
+.dwg .dimtx{opacity:0;animation:fade .5s ease forwards 1.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;
+    transition-duration:.01ms!important}
+  .rise{opacity:1;transform:none}
+  .dwg .struct,.dwg .dim{stroke-dashoffset:0}
+  .dwg .fillfade,.hold,.riser,.tag,.dwg .dimtx{opacity:1}
+}
+
+@media (max-width:960px){
+  .hero-in,.story,.wl,.split,.concept{grid-template-columns:1fr}
+  .split .sec-hd{position:static}
+  .steps,.tiles{grid-template-columns:1fr 1fr}
+  .specs{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .shot{max-width:520px}
+}
+@media (max-width:720px){
+  .plate svg{min-width:600px} .scroll-hint{display:inline}
+}
+@media (max-width:600px){
+  body{font-size:16.5px}
+  .shot,.story figure,.pair figure:first-child,.pair figure:last-child{transform:rotate(-.8deg)}
+  .tape{width:88px;height:26px}
+  .tape.tl{left:-12px;top:-10px} .tape.br{right:-12px;bottom:-10px}
+  .mark{font-size:16.5px;gap:8px}
+  .mark img{height:28px}
+  .nav .btn{font-size:13.5px;padding:9px 15px;white-space:nowrap}
+  .nav-in{gap:12px}
+  .steps,.tiles,.frow,.pair{grid-template-columns:1fr}
+  .nav-in{height:60px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="mark" href="#top">
+      <img src="img/mark.png" alt="" width="415" height="510">
+      <span>Michigan<i>&nbsp;·&nbsp;</i>Playrooms</span>
+    </a>
+    <div class="nav-links">
+      <a href="#build">What I build</a>
+      <a href="#story">My basement</a>
+      <a href="#sensory">Sensory rooms</a>
+      <a href="#how">How it works</a>
+    </div>
+    <a class="btn btn-glow" href="#waitlist">Join the waitlist</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow">Ann Arbor, Michigan</span>
+      <h1><em>Custom playrooms</em> that<br>keep kids busy all <span class="nb">winter.</span></h1>
+      <p class="lede">Climbing walls, rope nets, forts and reading nooks, designed around
+      your basement.</p>
+      <div class="hero-cta">
+        <a class="btn btn-glow btn-lg" href="#waitlist">Join the waitlist</a>
+        <span class="hero-note">Free visit &amp; drawing, no obligation</span>
+      </div>
+    </div>
+    <figure class="shot">
+      <span class="tape tl" aria-hidden="true"></span>
+      <span class="tape br" aria-hidden="true"></span>
+      <img src="img/playroom-hero.jpg" width="880" height="1100"
+           alt="A basement playroom with a rope net, climbing wall, painted forest mural, string lights and a curtained reading nook">
+      <figcaption>My own basement · Ann Arbor</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="lights" aria-hidden="true"></div>
+
+<section class="sec" id="build">
+  <div class="wrap split">
+    <div class="sec-hd rise">
+      <span class="eyebrow">What I build</span>
+      <h2>Somewhere to climb, hide, and land.</h2>
+      <p>Not kits, not furniture you assemble. Everything gets framed into the room —
+      anchored to real structure, cut to your walls, finished to match the house.</p>
+    </div>
+    <div class="listing rise">
+      <div class="item">
+        <span class="dot" style="background:#C4472F"></span>
+        <div><h3>Climbing walls</h3>
+        <p>Plywood face, real holds, bolted straight through. Routes move around as they
+        get taller and braver.</p></div>
+      </div>
+      <div class="item">
+        <span class="dot" style="background:#3F7A4A"></span>
+        <div><h3>Rope nets</h3>
+        <p>Knotted nets and rope ladders. A second way up, and the way most kids actually
+        come back down.</p></div>
+      </div>
+      <div class="item">
+        <span class="dot" style="background:#4FA3BD"></span>
+        <div><h3>Monkey bars</h3>
+        <p>A proper run overhead, mounted into the ceiling framing and set at a height
+        they can actually reach. Ends over something soft.</p></div>
+      </div>
+      <div class="item">
+        <span class="dot" style="background:#E0A93B"></span>
+        <div><h3>Forts &amp; lofts</h3>
+        <p>Platforms and hideouts sized to your actual ceiling — not to a photo from a
+        house with twelve-foot walls.</p></div>
+      </div>
+      <div class="item">
+        <span class="dot" style="background:#7B5A8C"></span>
+        <div><h3>Reading nooks</h3>
+        <p>Bench, bookshelf, warm light and a curtain they can pull shut. Every room needs
+        a quiet half.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="story" style="background:var(--lift)">
+  <div class="wrap">
+    <div class="story rise">
+      <div>
+        <span class="eyebrow">My basement</span>
+        <h2>This is the one that started it.</h2>
+        <p>Low ceiling, block walls, laundry in the corner — the same basement most
+        houses around here have. It took a handful of weekends.</p>
+        <p>The mural, the string lights, the curtain on the nook: none of that was on
+        the drawing. That part happened once the framing was up and we could stand in
+        it and see what it wanted to be.</p>
+        <p>That's why I only take one room at a time. The building is the easy half.</p>
+      </div>
+      <figure>
+        <span class="tape tl" aria-hidden="true"></span>
+        <img src="img/story.jpg" width="1000" height="886"
+             alt="The finished basement playroom lit at night"
+             style="border-radius:14px;box-shadow:0 22px 50px -26px rgba(43,35,24,.5)">
+      </figure>
+    </div>
+    <div class="pair rise">
+      <figure><span class="tape tl" aria-hidden="true"></span>
+        <img src="img/detail-net.jpg" width="600" height="750"
+             alt="Knotted rope net over a padded landing with a painted forest mural behind"></figure>
+      <figure><span class="tape br" aria-hidden="true"></span>
+        <img src="img/detail-nook.jpg" width="600" height="750"
+             alt="Curtained reading nook with a bookshelf, lantern and cushions"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-in rise">
+    <div>
+      <h2>Thinking about your basement?</h2>
+      <p>Tell me the room and I'll tell you what will fit. No charge for the visit
+      or the drawing.</p>
+    </div>
+    <a class="btn btn-glow btn-lg" href="#waitlist">Let's get started!</a>
+  </div>
+</section>
+
+<section class="sec dark" id="sensory">
+  <div class="wrap">
+    <div class="sec-hd rise">
+      <span class="eyebrow">Sensory rooms</span>
+      <h2>Rooms for kids who need something different.</h2>
+      <p>Some kids need to climb, swing, crash and squeeze before they can settle. If your
+      child works with a therapist or a specialist, bring me their notes and I'll build to
+      what they recommend.</p>
+    </div>
+    <div class="tiles rise">
+      <div class="tile"><span class="k">Heavy work</span><h3>Climb &amp; crash</h3>
+        <p>Walls, nets and foam landings that give real input, not just something to look at.</p></div>
+      <div class="tile"><span class="k">Swing anchors</span><h3>Rated hardware</h3>
+        <p>Anchors set into blocking or steel. Never a lag screw and a hope.</p></div>
+      <div class="tile"><span class="k">Retreat</span><h3>Somewhere to go quiet</h3>
+        <p>An enclosed nook with soft light, for when the room gets to be too much.</p></div>
+      <div class="tile"><span class="k">Together</span><h3>Built to their plan</h3>
+        <p>Bring me their notes and I'll build to them. I'd rather get it right than
+        build it twice.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-hd rise">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps, and no surprises.</h2>
+      <p>You won't get a number from me until I've stood in the room with a tape measure.
+      For scale: most rooms land between $9,000 and $19,000, depending on how much of
+      the room you want to fill.</p>
+    </div>
+    <div class="steps rise" style="margin-bottom:clamp(40px,6vw,72px)">
+      <div class="step"><span class="n" style="background:var(--h1c)">1</span><h3>Tell me about the room</h3>
+        <p>Fill out the waitlist. A couple of photos and a rough ceiling height help a lot.</p></div>
+      <div class="step"><span class="n" style="background:var(--h4c)">2</span><h3>I come see it</h3>
+        <p>I measure, find out what's behind the walls, and tell you what will and won't fit.</p></div>
+      <div class="step"><span class="n" style="background:var(--h5c)">3</span><h3>A drawing and your options</h3>
+        <p>You see exactly what you're getting, with pricing for a few different scopes, before you spend anything.</p></div>
+      <div class="step"><span class="n" style="background:var(--h2c)">4</span><h3>Build</h3>
+        <p>About two weeks in your house. Half down to hold the date, the rest when it's done.</p></div>
+    </div>
+
+    <div class="plate rise">
+      <div class="plate-hd">
+        <span class="eyebrow">Step 3 &nbsp;·&nbsp; what your drawing looks like<span class="scroll-hint"> &nbsp;·&nbsp; scroll to pan</span></span>
+        <span class="eyebrow">Tap a number</span>
+      </div>
+      <div class="dwg-scroll">
+      <svg class="dwg" viewBox="0 0 980 660" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-label="Measured elevation drawing of a playroom wall with climbing wall, rope net, fort platform and reading nook">
+        <line class="struct" x1="66" y1="202.8" x2="866" y2="202.8"/>
+        <line class="struct" x1="54" y1="580.0" x2="900" y2="580.0"/>
+
+        <g class="fillfade">
+          <rect x="121.3" y="221.2" width="391.0"
+                height="276.0" fill="#E8CFA4"/>
+        </g>
+        <g class="thin fillfade">
+        <line x1="121.3" y1="469.6" x2="512.3" y2="469.6"/>
+        <line x1="121.3" y1="442.0" x2="512.3" y2="442.0"/>
+        <line x1="121.3" y1="414.4" x2="512.3" y2="414.4"/>
+        <line x1="121.3" y1="386.8" x2="512.3" y2="386.8"/>
+        <line x1="121.3" y1="359.2" x2="512.3" y2="359.2"/>
+        <line x1="121.3" y1="331.6" x2="512.3" y2="331.6"/>
+        <line x1="121.3" y1="304.0" x2="512.3" y2="304.0"/>
+        <line x1="121.3" y1="276.4" x2="512.3" y2="276.4"/>
+        <line x1="121.3" y1="248.8" x2="512.3" y2="248.8"/>
+        <line x1="121.3" y1="221.2" x2="512.3" y2="221.2"/>
+        </g>
+        <g class="net fillfade">
+        <line x1="121.3" y1="497.2" x2="121.3" y2="221.2"/>
+        <line x1="162.7" y1="497.2" x2="162.7" y2="221.2"/>
+        <line x1="204.1" y1="497.2" x2="204.1" y2="221.2"/>
+        <line x1="245.5" y1="497.2" x2="245.5" y2="221.2"/>
+        <line x1="286.9" y1="497.2" x2="286.9" y2="221.2"/>
+        <line x1="328.3" y1="497.2" x2="328.3" y2="221.2"/>
+        <line x1="369.7" y1="497.2" x2="369.7" y2="221.2"/>
+        <line x1="411.1" y1="497.2" x2="411.1" y2="221.2"/>
+        <line x1="452.5" y1="497.2" x2="452.5" y2="221.2"/>
+        <line x1="493.9" y1="497.2" x2="493.9" y2="221.2"/>
+        <line x1="121.3" y1="497.2" x2="512.3" y2="497.2"/>
+        <line x1="121.3" y1="455.8" x2="512.3" y2="455.8"/>
+        <line x1="121.3" y1="414.4" x2="512.3" y2="414.4"/>
+        <line x1="121.3" y1="373.0" x2="512.3" y2="373.0"/>
+        <line x1="121.3" y1="331.6" x2="512.3" y2="331.6"/>
+        <line x1="121.3" y1="290.2" x2="512.3" y2="290.2"/>
+        <line x1="121.3" y1="248.8" x2="512.3" y2="248.8"/>
+        </g>
+        <circle class="hold" cx="155.8" cy="446.6" r="7.5" fill="#C4472F" stroke="#3A2E1F" stroke-width="1.3" style="--d:0.80s"/>
+      <circle class="hold" cx="206.4" cy="460.4" r="7.5" fill="#3F7A4A" stroke="#3A2E1F" stroke-width="1.3" style="--d:0.83s"/>
+      <circle class="hold" cx="257.0" cy="432.8" r="7.5" fill="#2E6E86" stroke="#3A2E1F" stroke-width="1.3" style="--d:0.87s"/>
+      <circle class="hold" cx="312.2" cy="451.2" r="7.5" fill="#E0A93B" stroke="#3A2E1F" stroke-width="1.3" style="--d:0.90s"/>
+      <circle class="hold" cx="367.4" cy="428.2" r="7.5" fill="#D2762E" stroke="#3A2E1F" stroke-width="1.3" style="--d:0.93s"/>
+      <circle class="hold" cx="178.8" cy="386.8" r="7.5" fill="#C4472F" stroke="#3A2E1F" stroke-width="1.3" style="--d:0.97s"/>
+      <circle class="hold" cx="234.0" cy="373.0" r="7.5" fill="#3F7A4A" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.00s"/>
+      <circle class="hold" cx="289.2" cy="396.0" r="7.5" fill="#2E6E86" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.03s"/>
+      <circle class="hold" cx="344.4" cy="368.4" r="7.5" fill="#E0A93B" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.06s"/>
+      <circle class="hold" cx="385.8" cy="386.8" r="7.5" fill="#D2762E" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.10s"/>
+      <circle class="hold" cx="165.0" cy="322.4" r="7.5" fill="#C4472F" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.13s"/>
+      <circle class="hold" cx="220.2" cy="313.2" r="7.5" fill="#3F7A4A" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.16s"/>
+      <circle class="hold" cx="275.4" cy="331.6" r="7.5" fill="#2E6E86" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.20s"/>
+      <circle class="hold" cx="330.6" cy="304.0" r="7.5" fill="#E0A93B" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.23s"/>
+      <circle class="hold" cx="381.2" cy="322.4" r="7.5" fill="#D2762E" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.26s"/>
+      <circle class="hold" cx="192.6" cy="258.0" r="7.5" fill="#C4472F" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.29s"/>
+      <circle class="hold" cx="247.8" cy="267.2" r="7.5" fill="#3F7A4A" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.33s"/>
+      <circle class="hold" cx="307.6" cy="248.8" r="7.5" fill="#2E6E86" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.36s"/>
+      <circle class="hold" cx="362.8" cy="267.2" r="7.5" fill="#E0A93B" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.39s"/>
+      <circle class="hold" cx="146.6" cy="276.4" r="7.5" fill="#D2762E" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.43s"/>
+      <circle class="hold" cx="284.6" cy="460.4" r="7.5" fill="#C4472F" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.46s"/>
+      <circle class="hold" cx="335.2" cy="405.2" r="7.5" fill="#3F7A4A" stroke="#3A2E1F" stroke-width="1.3" style="--d:1.49s"/>
+
+        <g class="fillfade">
+          <rect x="96.0" y="202.8" width="25.3" height="377.2" fill="var(--pine)"/>
+          <rect x="512.3" y="202.8" width="25.3" height="377.2" fill="var(--pine)"/>
+          <rect x="96.0" y="202.8" width="441.6" height="18.4" fill="var(--pine)"/>
+          <rect x="96.0" y="497.2" width="441.6" height="82.8" fill="var(--forest)"/>
+        </g>
+        <g class="struct" fill="none">
+          <rect x="96.0" y="202.8" width="25.3" height="377.2"/>
+          <rect x="512.3" y="202.8" width="25.3" height="377.2"/>
+          <rect x="96.0" y="202.8" width="441.6" height="18.4"/>
+          <rect x="96.0" y="497.2" width="441.6" height="82.8"/>
+        </g>
+        <text class="label fillfade" x="316.8" y="535.6">FOAM PIT</text>
+
+        <g class="fillfade">
+          <rect x="537.6" y="442.0" width="110.4" height="138.0" fill="#B9754A"/>
+          <path d="M 445.6 580.0 L 445.6 492.6 Q 445.6 437.4 505.4 437.4
+                   Q 565.2 437.4 565.2 492.6 L 565.2 580.0 Z" fill="var(--paper)"/>
+          <rect x="450.2" y="559.3" width="110.4" height="20.7" fill="var(--forest)"/>
+          <rect x="537.6" y="428.2" width="220.8" height="13.8" fill="var(--pine)"/>
+        </g>
+        <g class="struct" fill="none">
+          <rect x="537.6" y="442.0" width="110.4" height="138.0"/>
+          <path d="M 445.6 580.0 L 445.6 492.6 Q 445.6 437.4 505.4 437.4
+                   Q 565.2 437.4 565.2 492.6 L 565.2 580.0"/>
+          <rect x="537.6" y="428.2" width="220.8" height="13.8"/>
+        </g>
+
+        <g class="fillfade">
+          <rect x="537.6" y="290.2" width="16.1" height="138.0"
+                fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.6"/>
+          <rect x="631.9" y="290.2" width="16.1" height="138.0"
+                fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.6"/>
+          <rect x="564.13" y="304.0" width="5.2" height="124.2" fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.2"/>
+      <rect x="577.17" y="304.0" width="5.2" height="124.2" fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.2"/>
+      <rect x="590.2" y="304.0" width="5.2" height="124.2" fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.2"/>
+      <rect x="603.23" y="304.0" width="5.2" height="124.2" fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.2"/>
+      <rect x="616.27" y="304.0" width="5.2" height="124.2" fill="var(--forest)" stroke="#3A2E1F" stroke-width="1.2"/>
+          <rect x="537.6" y="290.2" width="110.4" height="13.8"
+                fill="var(--pine)" stroke="#3A2E1F" stroke-width="1.6"/>
+        </g>
+
+        <rect class="riser" x="648.0" y="552.4" width="110.4" height="27.6" fill="var(--forest)" fill-opacity="0.95" stroke="#3A2E1F" stroke-width="1.4" style="--d:1.40s"/>
+      <rect class="riser" x="648.0" y="524.8" width="110.4" height="27.6" fill="var(--forest)" fill-opacity="0.86" stroke="#3A2E1F" stroke-width="1.4" style="--d:1.47s"/>
+      <rect class="riser" x="648.0" y="497.2" width="110.4" height="27.6" fill="var(--forest)" fill-opacity="0.78" stroke="#3A2E1F" stroke-width="1.4" style="--d:1.54s"/>
+      <rect class="riser" x="648.0" y="469.6" width="110.4" height="27.6" fill="var(--forest)" fill-opacity="0.69" stroke="#3A2E1F" stroke-width="1.4" style="--d:1.61s"/>
+      <rect class="riser" x="648.0" y="442.0" width="110.4" height="27.6" fill="var(--forest)" fill-opacity="0.61" stroke="#3A2E1F" stroke-width="1.4" style="--d:1.68s"/>
+      <rect class="riser" x="648.0" y="414.4" width="110.4" height="27.6" fill="var(--forest)" fill-opacity="0.52" stroke="#3A2E1F" stroke-width="1.4" style="--d:1.75s"/>
+        <text class="label fillfade" x="703.2" y="488.0" style="font-size:11px">LADDER</text>
+
+        <g class="dim">
+          <path d="M 96.0 612 L 758.4 612 M 96.0 605 L 96.0 619 M 758.4 605 L 758.4 619"/>
+          <path d="M 78 202.8 L 78 580.0 M 71 202.8 L 85 202.8 M 71 580.0 L 85 580.0"/>
+          <path d="M 848 442.0 L 848 580.0 M 841 442.0 L 855 442.0 M 841 580.0 L 855 580.0"/>
+        </g>
+        <rect class="fillfade" x="381.2" y="602" width="92" height="19" fill="var(--paper)"/>
+        <text class="dimtx" x="427.2" y="617">12'-0"</text>
+        <g transform="translate(78,391.4) rotate(-90)">
+          <rect class="fillfade" x="-40" y="-9" width="80" height="18" fill="var(--paper)"/>
+          <text class="dimtx" y="5">6'-10"</text>
+        </g>
+        <g transform="translate(848,511.0) rotate(-90)">
+          <rect class="fillfade" x="-33" y="-9" width="66" height="18" fill="var(--paper)"/>
+          <text class="dimtx" y="5">2'-6"</text>
+        </g>
+
+        <g class="tag" data-tag="1" tabindex="0" role="button" aria-label="Climbing wall" style="--d:1.90s"><circle cx="330" cy="250" r="18" class="tag-hit"/><circle cx="330" cy="250" r="11.5" class="tag-dot"/><text x="330" y="254.2" class="tag-num">1</text></g>
+      <g class="tag" data-tag="2" tabindex="0" role="button" aria-label="Rope wall" style="--d:1.99s"><circle cx="160" cy="250" r="18" class="tag-hit"/><circle cx="160" cy="250" r="11.5" class="tag-dot"/><text x="160" y="254.2" class="tag-num">2</text></g>
+      <g class="tag" data-tag="3" tabindex="0" role="button" aria-label="Foam pit" style="--d:2.08s"><circle cx="200" cy="530" r="18" class="tag-hit"/><circle cx="200" cy="530" r="11.5" class="tag-dot"/><text x="200" y="534.2" class="tag-num">3</text></g>
+      <g class="tag" data-tag="4" tabindex="0" role="button" aria-label="Monkey bars" style="--d:2.17s"><circle cx="560" cy="250" r="18" class="tag-hit"/><circle cx="560" cy="250" r="11.5" class="tag-dot"/><text x="560" y="254.2" class="tag-num">4</text></g>
+      <g class="tag" data-tag="5" tabindex="0" role="button" aria-label="Platform" style="--d:2.26s"><circle cx="640" cy="420" r="18" class="tag-hit"/><circle cx="640" cy="420" r="11.5" class="tag-dot"/><text x="640" y="424.2" class="tag-num">5</text></g>
+      <g class="tag" data-tag="6" tabindex="0" role="button" aria-label="Ladder" style="--d:2.35s"><circle cx="700" cy="530" r="18" class="tag-hit"/><circle cx="700" cy="530" r="11.5" class="tag-dot"/><text x="700" y="534.2" class="tag-num">6</text></g>
+      </svg>
+      </div>
+      <div class="caps" id="caps">
+        <div class="cap is-on" data-cap="1"><span class="cap-n">1</span><div><b>Climbing wall</b><span>Eight feet of plywood face on a full t-nut grid. Holds move as they get taller.</span></div></div>
+        <div class="cap" data-cap="2"><span class="cap-n">2</span><div><b>Rope wall</b><span>Knotted net up one side. A second way up, and the way most kids come down.</span></div></div>
+        <div class="cap" data-cap="3"><span class="cap-n">3</span><div><b>Foam pit</b><span>Blocks over a rated base mat. Everything above empties into it.</span></div></div>
+        <div class="cap" data-cap="4"><span class="cap-n">4</span><div><b>Monkey bars</b><span>A run overhead at kid height, ending over the foam.</span></div></div>
+        <div class="cap" data-cap="5"><span class="cap-n">5</span><div><b>Platform</b><span>Deck at two and a half feet, padded top. High enough to feel like theirs.</span></div></div>
+        <div class="cap" data-cap="6"><span class="cap-n">6</span><div><b>Ladder</b><span>Short rungs, fixed top and bottom, sized for small hands.</span></div></div>
+      </div>
+    </div>
+
+    <div class="concept rise">
+      <figure>
+        <img src="img/concept.jpg" width="1200" height="900"
+             alt="Design concept for a basement playroom with climbing wall, rope net, foam pit and a raised nook">
+        <figcaption>Design concept &mdash; not a finished build</figcaption>
+      </figure>
+      <div>
+        <span class="eyebrow">And a concept</span>
+        <h3>So you can see it before it exists.</h3>
+        <p>Alongside the measured drawing you get a coloured concept of the room —
+        palette, finishes, where everything lands. It's the easiest way to change your
+        mind while changing your mind is still free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="safety">
+  <div class="wrap">
+    <div class="sec-hd rise">
+      <span class="eyebrow">The boring important part</span>
+      <h2>Built like there's a kid on it.</h2>
+      <p>Because there will be. I build to the published playground safety guidance,
+      adapted for indoors and for the ages of the kids using the room. None of it is an
+      upgrade — it's just how it gets built.</p>
+    </div>
+    <div class="specs rise">
+      <div class="spec"><span class="v">Anchored</span>
+        <p>Everything ties into real framing, not drywall. Hardware goes through the
+        plywood and gets a nut on the back.</p></div>
+      <div class="spec"><span class="v">Gaps</span>
+        <p>Openings are sized so nothing can catch a head or an arm — the thing that
+        matters most and that nobody thinks about.</p></div>
+      <div class="spec"><span class="v">Landings</span>
+        <p>Rated matting and foam under everything they can climb or hang from.
+        Not an upgrade, just how it gets built.</p></div>
+      <div class="spec"><span class="v">Materials</span>
+        <p>Low-VOC finishes and formaldehyde-free plywood. It's a room they'll be
+        in every day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="waitlist" style="background:var(--lift)">
+  <div class="wrap wl">
+    <div class="rise">
+      <span class="eyebrow" style="color:var(--glow-hi)">Waitlist</span>
+      <h2 style="font-size:clamp(28px,3.4vw,44px);margin:12px 0 16px">Get on the list.</h2>
+      <p class="muted">One room at a time means the calendar fills a
+      season ahead. Tell me about your space and I'll come back with an honest window —
+      even if that window is next year.</p>
+
+      <div class="slots">
+        <!-- EDIT THESE TWO LINES as the season fills. Keep them true. -->
+        <span class="eyebrow" style="color:var(--glow-hi)">Winter 2026 &nbsp;·&nbsp; 4 build slots</span>
+        <div class="slots-row" aria-hidden="true">
+          <span class="slot taken"></span><span class="slot"></span>
+          <span class="slot"></span><span class="slot"></span>
+        </div>
+        <small>1 booked &nbsp;·&nbsp; 3 open &nbsp;·&nbsp; updated August 2026</small>
+      </div>
+
+      <div class="promise">
+        <div class="pr"><span class="v">Free</span>
+          <p>The visit and the drawing don't cost you anything.</p></div>
+        <div class="pr"><span class="v">Honest</span>
+          <p>If your ceiling won't take what you're picturing, you'll hear it on day one —
+          not halfway through.</p></div>
+        <div class="pr"><span class="v">Or not</span>
+          <p>If I'm not the right fit, I'll say so and point you to someone better.</p></div>
+      </div>
+    </div>
+
+    <div class="form rise" id="form">
+      <div class="fform">
+        <div class="frow">
+          <div class="field"><label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-city">City or township</label>
+            <input id="f-city" name="city" type="text" placeholder="Ann Arbor"
+                   autocomplete="address-level2" required></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <button class="btn btn-glow" type="button" id="submit">Let's get started!</button>
+        <p class="fineprint">I read every one myself. No newsletter, no sharing your details.</p>
+      </div>
+      <div class="done" id="done">
+        <h3>You're on the list.</h3>
+        <p>I'll be in touch within two business days with a realistic window and a few
+        questions about the room. If it's a fit, the next step is me coming to see it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a href="#top" style="display:inline-block">
+        <img src="img/logo-lockup.png" alt="Michigan Playrooms"
+             width="932" height="382" style="height:52px;width:auto">
+      </a>
+      <p style="margin-top:14px;max-width:34ch">Play structures built into homes across
+      Washtenaw, Livingston and Oakland counties.</p>
+      <p style="margin-top:12px"><a href="mailto:hello@michiganplayrooms.com">hello@michiganplayrooms.com</a></p>
+    </div>
+    <div class="stamp">Kessenich Carpentry<br>Carpentry &amp; Handyman<br>Ann Arbor, Michigan</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tags = document.querySelectorAll('.tag'), caps = document.querySelectorAll('.cap');
+  function show(n){
+    tags.forEach(function(t){ t.classList.toggle('is-on', t.dataset.tag === n); });
+    caps.forEach(function(c){ c.classList.toggle('is-on', c.dataset.cap === n); });
+  }
+  tags.forEach(function(t){
+    ['mouseenter','focus','click'].forEach(function(ev){
+      t.addEventListener(ev, function(){ show(t.dataset.tag); });
+    });
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); show(t.dataset.tag); }
+    });
+  });
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
+    document.querySelectorAll('.rise').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.rise').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var ENDPOINT = 'https://formspree.io/f/xjyvegab';
+  var form = document.getElementById('form');
+  document.getElementById('submit').addEventListener('click', function(){
+    var ok = true;
+    ['f-name','f-city','f-email'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el.value.trim()){ el.style.borderColor = '#C4472F'; ok = false; }
+      else { el.style.borderColor = ''; }
+    });
+    if(!ok){ document.getElementById('f-name').focus(); return; }
+    var data = {};
+    form.querySelectorAll('input,select,textarea').forEach(function(el){
+      if(el.name) data[el.name] = el.value;
+    });
+    function finish(){
+      form.classList.add('is-sent');
+      document.getElementById('done').classList.add('is-on');
+      form.scrollIntoView({ behavior:'smooth', block:'center' });
+    }
+    var btn = document.getElementById('submit');
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(ENDPOINT, { method:'POST',
+      headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+      body: JSON.stringify(data) })
+      .then(function(r){
+        if(r.ok){ finish(); }
+        else {
+          btn.disabled = false; btn.textContent = "Let's get started!";
+          alert('Something went wrong sending that. Email hello@michiganplayrooms.com and I will pick it up.');
+        }
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = "Let's get started!";
+        alert('Something went wrong sending that. Email hello@michiganplayrooms.com and I will pick it up.');
+      });
+  });
+})();
+</script>
+</body>
+</html>
